@@ -1,0 +1,32 @@
+#userlogin{
+   display: none;
+    width: 300px;
+    height: 200px;   
+    margin: 0 auto;
+}
+#username, #password{
+    margin: 20px;
+}
+#loginbtn{
+    margin-left: 82px;
+}
+a{
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;    
+}
+#register, #login{
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    color:#337ab7;
+}
+#logo{
+    width: 150px;
+    }
+#header{
+    box-shadow: 2px 10px rgb(92, 34, 131);
+    border-bottom: 1px solid black;
+}
+header{
+    background: url()
+   
+}
