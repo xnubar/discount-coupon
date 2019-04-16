@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Admincast bootstrap 4 &amp; angular 5 admin template, Шаблон админки | Profile</title>
+    <title>Profile</title>
     <link rel="shortcut icon" href="./assets/imgs/logo.png">
-    <!-- GLOBAL MAINLY STYLES-->
+    <link rel="stylesheet" href="./assets/css/profile.css">
     <link href="./assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="./assets/vendors/themify-icons/css/themify-icons.css" rel="stylesheet" />
-    <!-- PLUGINS STYLES-->
-    <!-- THEME STYLES-->
     <link href="assets/css/main.min.css" rel="stylesheet" />
-
-    <!-- PAGE LEVEL STYLES-->
 </head>
 
 <body class="fixed-navbar sidebar-mini">
@@ -47,8 +43,6 @@
                         </form>
                     </li>
                 </ul>
-                <!-- END TOP-LEFT TOOLBAR-->
-                <!-- START TOP-RIGHT TOOLBAR-->
                 <ul class="nav navbar-toolbar">
                     <li class="dropdown dropdown-inbox">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope-o"></i>
@@ -129,11 +123,8 @@
                         </ul>
                     </li>
                 </ul>
-                <!-- END TOP-RIGHT TOOLBAR-->
             </div>
         </header>
-        <!-- END HEADER-->
-        <!-- START SIDEBAR-->
         <nav class="page-sidebar" id="sidebar">
             <div id="sidebar-collapse">
                 <div class="admin-block d-flex">
@@ -155,93 +146,89 @@
                         <a href="javascript:;"><i class="sidebar-item-icon fa fa-cart-plus"></i>
                             <span class="nav-label">Discounts</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
-                            <li data-value="audio" class="category">
-                                <a href="#">Audio & Accessories</a>
+                            <li data-value="audio" class="discount">
+                                <a>Audio & Accessories</a>
                             </li>
-                       
-                            <li class="category" data-value="bars-clubs">
-                                <a href="#">Bars & Clubs</a>
+
+                            <li class="discount" data-value="bars-clubs">
+                                <a>Bars & Clubs</a>
                             </li>
-                            <li class="category">
-                                <a href="#" data-value="beauty_health">Beauty & Health</a>
-                            </li>
+
                             <li>
                                 <a href="javascript:;"><i class="sidebar-item-icon fa fa-sitemap"></i>
                                     <span class="nav-label">Clothing</span><i class="fa fa-angle-left arrow"></i></a>
                                 <ul class="nav-2-level collapse">
-                                    <li class="category">
-                                        <a href="#" data-value="kid">
-                                            <i class="sidebar-item-icon fa fa-child"></i> Kid</a>
+                                    <li class="discount" data-value="kid">
+                                        <a>
+                                            Kid
                                         </a>
                                     </li>
-                                    <li class="category">
-                                        <a href="#" data-value="mens-clothing">
-                                            <i class="sidebar-item-icon fa fa-male"></i>
+                                    <li class="discount" data-value="mens-clothing">
+                                        <a>
                                             Men's Clothing</a>
                                     </li>
-                                    <li class="category">
-                                        <a href="#" data-value="womens-clothing">
-                                            <i class="sidebar-item-icon fa fa-female"></i>
+                                    <li class="discount" data-value="womens-clothing">
+                                        <a>
                                             Women's Clothing</a>
                                     </li>
 
                                 </ul>
                             </li>
 
-                            <li class="category">
-                                <a href="#" data-value="concerts">Concerts</a>
+                            <li class="discount" data-value="concerts">
+                                <a>Concerts</a>
                             </li>
-                            <li class="category">
-                                <a href="#" data-value="electronics">Electronics</a>
-                            </li>
-                            <li class="category">
-                                <a href="#" data-value="fashion_accessories">Fashion Accessories</a>
-                            </li>
-                            <li class="category">
-                                <a href="#" data-value="food_alcohol">Food & Alcohol</a>
-                            </li>
-                            <li class="category">
-                                <a href="#" data-value="gym">Gym</a>
-                            </li>
-                            <li class="category">
-                                <a href="#" data-value="kids">Kids</a>
-                            </li>
-                            <li class="category">
-                                <a href="#" data-value="makeup">Makeup</a>
-                            </li>
-                            <li class="category">
-                                <a href="#" data-value="toys">Toys</a>
-                            </li>
-                            <li class="category">
-                                <a href="#" data-value="travel">Travel</a>
-                            </li>
-                            <li class="category">
-                                <a href="#" data-value="pets">Pets</a>
-                            </li>
-                            <li class="category">
-                                <a href="#" data-value="movies_music_games">Movies, Music, & Games</a>
+                            <li class="discount" data-value="electronics">
+                                <a>Electronics</a>
                             </li>
 
+                            <li class="discount" data-value="gym">
+                                <a>Gym</a>
+                            </li>
+                            <li class="discount" data-value="makeup">
+                                <a>Makeup</a>
+                            </li>
+                            <li class="discount" data-value="toys">
+                                <a>Toys</a>
+                            </li>
+                            <li class="discount" data-value="travel">
+                                <a>Travel</a>
+                            </li>
+                            <li class="discount" data-value="pets">
+                                <a>Pets</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;"><i class="sidebar-item-icon fa fa-address-card-o"></i>
                             <span class="nav-label">Coupons</span><i class="fa fa-angle-left arrow"></i></a>
                         <ul class="nav-2-level collapse">
-                            <li>
-                                <a href="form_basic.html">Basic Forms</a>
+                            <li class="coupon" data-value="1635046130">
+                                <a>Movies</a>
                             </li>
-                            <li>
-                                <a href="form_advanced.html">Advanced Plugins</a>
+                            <li class="coupon" data-value="1694053047">
+                                <a>Entertainment</a>
                             </li>
-                            <li>
-                                <a href="form_masks.html">Form input masks</a>
+                            <li class="coupon" data-value="1640583276">
+                                <a>Travel</a>
                             </li>
-                            <li>
-                                <a href="form_validation.html">Form Validation</a>
+                            <li class="coupon" data-value="1612648603">
+                                <a>Grocery</a>
                             </li>
-                            <li>
-                                <a href="text_editors.html">Text Editors</a>
+                            <li class="coupon" data-value="1621128381">
+                                <a>Personal & Beauty Care</a>
+                            </li>
+                            <li class="coupon" data-value="1699424559">
+                                <a>Food & Dining</a>
+                            </li>
+                            <li class="coupon" data-value="Hotels">
+                                <a>Hotels</a>
+                            </li>
+                            <li class="coupon" data-value="1614362260">
+                                <a>Bus</a>
+                            </li>
+                            <li class="coupon" data-value="1633865309">
+                                <a>Fashion</a>
                             </li>
                         </ul>
                     </li>
@@ -250,7 +237,6 @@
                 </ul>
             </div>
         </nav>
-        <!-- END SIDEBAR-->
         <div class="content-wrapper">
 
             <div class="page-content fade-in-up">
@@ -260,12 +246,12 @@
                             <div class="tab-pane fade show active" id="showall" role="tabpanel"
                                 aria-labelledby="showall-tab">
                                 <div class="products">
-                                  
-                                  
+
+
                                 </div>
                             </div>
-                      
-                       
+
+
                         </div>
                     </div>
 
@@ -273,7 +259,6 @@
             </div>
         </div>
     </div>
-    <!-- BEGIN THEME CONFIG PANEL-->
     <div class="theme-config">
         <div class="theme-config-toggle"><i class="fa fa-cog theme-config-show"></i><i
                 class="ti-close theme-config-close"></i></div>
@@ -421,7 +406,6 @@
     <!-- CORE SCRIPTS-->
     <script src="assets/js/app.min.js" type="text/javascript"></script>
     <!-- PAGE LEVEL SCRIPTS-->
-    <script src="./assets/js/scripts/profile-demo.js" type="text/javascript"></script>
 
     <script src="assets/js/script.js"></script>
 </body>
