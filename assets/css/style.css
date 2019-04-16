@@ -1,0 +1,41 @@
+#header{
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.logo-text{
+    font-family: 'Kaushan Script', cursive;
+    margin-top: 30px;
+    text-align: center;
+}
+#header-nav{
+    font-size: 25px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 40px;    
+}
+#header-nav a{
+    text-decoration: none;
+    margin-right: 10px;
+    color: #253544;
+    font-family: 'Crimson Text', serif;
+}
+#header-nav a:hover{
+    color: rgba(103, 206, 247, 0.836);    
+}
+#section{
+    margin-top: 10px;
+}
+#footer{
+    border-top: 3px solid black;
+}
+#footer-div{
+    text-align: center;
+    height: 50px;
+    font-family: 'Crimson Text', serif;
+}
+
+.carousel-inner > .carousel-item > img {
+    width:100%;
+    height:600px;
+    margin: 0 auto;
+}
