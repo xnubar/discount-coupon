@@ -53,7 +53,6 @@ function loadDiscounts(response) {
 
             let owlItem = $("<div>")
             $(owlItem).addClass("owl-item");
-            $(owlItem).addClass("product-container");
 
             let dealItem=$("<div>");
             $(dealItem).addClass("item");

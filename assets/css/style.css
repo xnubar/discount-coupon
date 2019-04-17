@@ -46,18 +46,16 @@ body {
     margin: 0 auto;
 }
 
-.product-container {
+
+
+.owl-item {
+    width: 210px !important;
     padding: 0;
     position: relative;
-    margin: 100px 5px;
     float: left;
     transition-duration: 0.4s;
     border-radius: 5px;
     animation: winanim 0.5s ;
-}
-
-.owl-item {
-    width: 210px !important;
 }
 
 .deal-item {
