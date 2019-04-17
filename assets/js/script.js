@@ -44,28 +44,7 @@ $(document).on("click",".close",function(){
 })
 
 
-/*
-
-    <div class="owl-item active" style="width: 201.667px; margin-right: 20px;">
-                                        <div class="item deal-item">
-                                           
-                                            <div class="deal-content">
-                                            
-                                                <div class="deal-content-bottom">
-                                                    <p><i class="fa fa-clock-o"></i> 0 days, 0h Remaining</p>
-                                                    <a type="button" data-toggle="modal" data-target="#coupon-code"
-                                                        class="btn btn-sm">Get It</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-*/
-
 function loadDiscounts(response) {
-    console.log(response)
     $(".products").empty();
     for (let deal in response.deals) {
 
