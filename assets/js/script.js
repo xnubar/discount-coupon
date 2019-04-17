@@ -44,38 +44,95 @@ $(document).on("click",".close",function(){
 })
 
 
+/*
+
+    <div class="owl-item active" style="width: 201.667px; margin-right: 20px;">
+                                        <div class="item deal-item">
+                                           
+                                            <div class="deal-content">
+                                            
+                                                <div class="deal-content-bottom">
+                                                    <p><i class="fa fa-clock-o"></i> 0 days, 0h Remaining</p>
+                                                    <a type="button" data-toggle="modal" data-target="#coupon-code"
+                                                        class="btn btn-sm">Get It</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+*/
+
 function loadDiscounts(response) {
+    console.log(response)
     $(".products").empty();
     for (let deal in response.deals) {
 
         for (let item in response.deals[deal]) {
             let itemDeal = response.deals[deal][item];
-            let div = $("<div>")
-            $(div).addClass("product-container");
+
+            let owlItem = $("<div>")
+            $(owlItem).addClass("owl-item");
+            $(owlItem).addClass("product-container");
+
+            let dealItem=$("<div>");
+            $(dealItem).addClass("item");
+            $(dealItem).addClass("deal-item");
 
 
-            let a = $("<a>");
-            // $(a).attr("href",itemDeal.url);
-            // $(a).attr("target","_blank");
+            let dealThumb=$("<div>");
+            $(dealThumb).addClass("deal-thumb");
 
-            let img = $("<img>");
-            $(img).attr("src", itemDeal.image_url);
-            $(a).append(img);
+            let img=$("<img>");
+            $(img).addClass("img-responsive");
+            $(img).attr("src",itemDeal.image_url);
 
-            let dealBadge=$("<div>")
-            $(dealBadge).addClass("deal-badge");
-            $(dealBadge).html((itemDeal.discount_percentage*100).toPrecision(4))
+            let badge=$("<div>");
+            $(badge).addClass("deal-badge");
+            $(badge).html((itemDeal.discount_percentage*100).toPrecision(4)+"%");
+            
+            $(dealThumb).append(img);
+            $(dealThumb).append(badge);           
+            
+            let dealContent=$("<div>");
+            $(dealContent).addClass("deal-content");
 
+            let p=$("<p>");
+            $(p).html(itemDeal.title);            
+            $(dealContent).append(p)
 
-            let desc = $("<div>")
-            $(desc).addClass("desc");
-            $(desc).html(itemDeal.title)
+            let dealContentBottom=$("<div>");
+            $(dealContentBottom).addClass("deal-content-bottom");
+            $(dealContent).append(dealContentBottom)
 
-            $(div).append(a);
-            $(div).append(dealBadge)
-            $(div).append(desc);
+            let date=new Date(itemDeal.expires_at);
+            let expireDate=$("<p>");
+            $(expireDate).addClass("expire-date");
+          
+            let i=$("<i>");
+            $(i).addClass("fa fa-clock-o");
+            $(expireDate).append(i);
+            $(expireDate).append(" <span>"+date.getDate()+'/'+date.getMonth()+1+'/'+date.getFullYear()+"</span>")
 
-            $(".products").append(div);
+            $(dealContentBottom).append(expireDate);
+
+            let a=$("<a>");
+            $(a).attr("type","button");
+            $(a).data("toggle","modal");
+            $(a).data("target","#coupon_code");
+            $(a).addClass("btn");
+            $(a).addClass("btn-sm");
+            $(a).html("Get it");
+            $(dealContentBottom).append(a);
+
+            
+            $(dealItem).append(dealThumb);
+            $(dealItem).append(dealContent);
+
+            $(owlItem).append(dealItem);
+
+            $(".products").append(owlItem);      
         }
     }
 
