@@ -3531,3 +3531,6 @@ table.dataTable {
     .brand a{
       font-family: 'Kaushan Script', cursive;
     }
+#newpassword,#confirm-newpassword,#submitpassword{
+  display:none;
+}
