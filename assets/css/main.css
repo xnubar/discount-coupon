@@ -3041,8 +3041,7 @@ body:not(.fixed-layout).sidebar-mini .page-sidebar {
 body:not(.fixed-layout).sidebar-mini .page-brand {
   width: 60px; }
 
-body:not(.fixed-layout).sidebar-mini .brand {
-  display: none; }
+
 
 body:not(.fixed-layout).sidebar-mini .brand-mini {
   display: block !important; }
