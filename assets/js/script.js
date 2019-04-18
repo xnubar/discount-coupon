@@ -21,6 +21,8 @@ $(document).on("click", ".discount", function () {
     })
 })
 
+
+
 $(document).on("click", ".coupon", function () {
 
 
