@@ -126,7 +126,6 @@ function loadDiscounts(response) {
             $(a).addClass("btn");
             $(a).addClass("btn-sm");
             $(a).html("Get it");
-            $(a).attr("href","")
             $(dealContentBottom).append(a);
 
 
