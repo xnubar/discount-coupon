@@ -60,8 +60,8 @@ function reset(){
     $("#email").val("");
     $("#password").val("");
 
-    $("#email").attr("autocomplete","off")
-    $("#password").attr("autocomplete","off")
+    // $("#email").attr("autocomplete","off")
+    // $("#password").attr("autocomplete","off")
 
 }
 
