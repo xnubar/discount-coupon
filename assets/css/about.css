@@ -1,0 +1,37 @@
+#about h2,#about-team h2{
+    text-align: center;
+    color: green;
+    font-size: 40px;
+    font-family: 'Dokdo', cursive;
+}
+#page-inform h3, #team-inform h3{
+    text-align: center;
+    color: grey;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+}
+#page-inform p, #team-inform p{
+    color: blueviolet;
+    font-family: 'Source Code Pro', monospace;
+}
+#page-inform i, #team-inform i{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 20px;
+    color: blue;
+}
+#about img{
+    width: 100%;
+    height: 350px;
+}
+#about {
+    padding: 25px;
+    height: 500px;      
+}  
+  #about .about-title {
+    text-align: center;
+    margin:20px 0;
+    font-family: 'Crimson Text', serif;
+}
