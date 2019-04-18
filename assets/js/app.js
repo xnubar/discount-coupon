@@ -43,7 +43,7 @@ $(window).on('load resize scroll', function () {
 $(function () {
 
     // SIDEBAR ACTIVATE METISMENU
-    $(".metismenu").metisMenu();
+    //$(".metismenu").metisMenu();
 
     // Activate Tooltips
     $('[data-toggle="tooltip"]').tooltip();
