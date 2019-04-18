@@ -3528,3 +3528,6 @@ table.dataTable {
     -webkit-justify-content: start !important;
     -ms-flex-pack: start !important;
     justify-content: start !important; } }
+    .brand a{
+      font-family: 'Kaushan Script', cursive;
+    }
