@@ -9,9 +9,6 @@ firebase.initializeApp(config);
 var database = firebase.database()
 
 
-database.ref("users/").once("value", function (snap) {
-
-})
 
 
 function encrypt(password){
@@ -36,7 +33,7 @@ $(".btn").on("click", function () {
         for (let i in val) {
             let user=val[i];
             if(user.email===email&&user.password===password){
-                window.localStorage.setItem("user",user);
+                window.localStorage.setItem("user",JSON.stringify(user));
                 window.location='profile.html'
             }
         }
