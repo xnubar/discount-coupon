@@ -1,15 +1,18 @@
 .product-container {
   padding: 0;
   position: relative;
-  margin: 10px 5px;
+  margin: 5px 2px;
   float: left;
   transition-duration: 0.4s;
   border-radius: 5px;
   animation: winanim 0.5s ;
 }
-
+header .page-brand .brand-mini{display:none}
 .owl-item {
   width: 210px !important;
+}
+li {
+  color: #fff;
 }
 
 .deal-item {

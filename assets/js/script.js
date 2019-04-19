@@ -5,6 +5,13 @@ var couponApiKey = "f6a567b2ec0309145538a7fc5fd12df33150c6d7ecadb043a1a1ffa963d7
 var couponQuery = "https://campaigns.zoho.com/api/coupon/coupondetails"
 var subquery;
 
+var user;
+$(document).ready(function(){
+   user=JSON.parse(window.localStorage.getItem("user"))
+   $(".username-title").html(user.firstName)
+
+   $(".user-fullname").html(user.firstName+" "+user.lastName);
+})
 
 $(document).on("click", ".discount", function () {
     subquery = $(this).data("value");

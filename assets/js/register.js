@@ -60,9 +60,6 @@ function reset(){
     $("#email").val("");
     $("#password").val("");
 
-    // $("#email").attr("autocomplete","off")
-    // $("#password").attr("autocomplete","off")
-
 }
 
 
@@ -79,12 +76,9 @@ $("#register").on("click", function (e) {
         $(".error-text").show();
     } else {
         $(".error-text").hide();
-        window.localStorage.setItem("user", user);
+        window.localStorage.setItem("user", JSON.stringify(user));
         window.location = 'profile.html';
     }
 
     reset();
-
-
-
 })
