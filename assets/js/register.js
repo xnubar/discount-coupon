@@ -36,7 +36,7 @@ class UserService {
                     emailExists = true;
                 }
             }
-            
+
         })
 
         if (!emailExists) {
@@ -54,7 +54,7 @@ class UserService {
     }
 }
 
-function reset(){
+function reset() {
     $("#first-name").val("");
     $("#last-name").val("");
     $("#email").val("");
@@ -77,8 +77,11 @@ $("#register").on("click", function (e) {
     } else {
         $(".error-text").hide();
         window.localStorage.setItem("user", JSON.stringify(user));
-        window.location = 'profile.html';
+        reset();
+        if (user.email === "admin@mail.ru") {
+            window.location = "admin.html";
+        } else {
+            window.location = 'profile.html';
+        }
     }
-
-    reset();
 })

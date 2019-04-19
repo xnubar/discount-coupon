@@ -8,6 +8,7 @@ var subquery;
 var user;
 $(document).ready(function(){
    user=JSON.parse(window.localStorage.getItem("user"))
+   console.log(user)
    $(".username-title").html(user.firstName)
 
    $(".user-fullname").html(user.firstName+" "+user.lastName);
@@ -23,7 +24,6 @@ $(document).on("click", ".discount", function () {
         }
 
     }).done(function (response) {
-        console.log(response)
         loadDiscounts(response);
     })
 })
