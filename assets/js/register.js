@@ -36,7 +36,7 @@ class UserService {
                     emailExists = true;
                 }
             }
-            
+
         })
 
         if (!emailExists) {
@@ -54,14 +54,11 @@ class UserService {
     }
 }
 
-function reset(){
+function reset() {
     $("#first-name").val("");
     $("#last-name").val("");
     $("#email").val("");
     $("#password").val("");
-
-    // $("#email").attr("autocomplete","off")
-    // $("#password").attr("autocomplete","off")
 
 }
 
@@ -79,12 +76,12 @@ $("#register").on("click", function (e) {
         $(".error-text").show();
     } else {
         $(".error-text").hide();
-        window.localStorage.setItem("user", user);
-        window.location = 'profile.html';
+        window.localStorage.setItem("user", JSON.stringify(user));
+        reset();
+        if (user.email === "admin@mail.ru") {
+            window.location = "admin.html";
+        } else {
+            window.location = 'profile.html';
+        }
     }
-
-    reset();
-
-
-
 })

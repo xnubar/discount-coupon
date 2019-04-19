@@ -9,18 +9,15 @@ firebase.initializeApp(config);
 var database = firebase.database()
 
 
-database.ref("users/").once("value", function (snap) {
-
-})
 
 
-function encrypt(password){
-    let key='m';
-    let encryptedPassword="";
+function encrypt(password) {
+    let key = 'm';
+    let encryptedPassword = "";
 
-    for(let i in password){
-        encryptedPassword+=password[i]^(key.charCodeAt()+i)%255;
-    
+    for (let i in password) {
+        encryptedPassword += password[i] ^ (key.charCodeAt() + i) % 255;
+
     }
     return encryptedPassword;
 }
@@ -34,14 +31,16 @@ $(".btn").on("click", function () {
     database.ref("users/").once("value", function (snap) {
         let val = snap.val()
         for (let i in val) {
-            let user=val[i];
-            if(user.email===email&&user.password===password){
-                window.localStorage.setItem("user",user);
-                window.location='profile.html'
+            let user = val[i];
+            if (email === "admin@mail.ru" && user.password === password) {
+                window.location = 'admin.html';
+            } else if (user.email === email && user.password === password) {
+                window.localStorage.setItem("user", JSON.stringify(user));
+                window.location = 'profile.html';
             }
         }
 
     })
 
-})       
-  
+})
+

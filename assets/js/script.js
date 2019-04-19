@@ -5,6 +5,14 @@ var couponApiKey = "f6a567b2ec0309145538a7fc5fd12df33150c6d7ecadb043a1a1ffa963d7
 var couponQuery = "https://campaigns.zoho.com/api/coupon/coupondetails"
 var subquery;
 
+var user;
+$(document).ready(function(){
+   user=JSON.parse(window.localStorage.getItem("user"))
+   console.log(user)
+   $(".username-title").html(user.firstName)
+
+   $(".user-fullname").html(user.firstName+" "+user.lastName);
+})
 
 $(document).on("click", ".discount", function () {
     subquery = $(this).data("value");
@@ -14,9 +22,7 @@ $(document).on("click", ".discount", function () {
             api_key: discountApiKey,
             category_slugs: subquery
         }
-
     }).done(function (response) {
-        console.log(response)
         loadDiscounts(response);
     })
 })
@@ -24,16 +30,11 @@ $(document).on("click", ".discount", function () {
 
 
 $(document).on("click", ".coupon", function () {
-
-
     $.ajax({
         url: couponQuery
-
-
     }).done(function (response) {
         console.log(response)
     })
-
 })
 
 $(document).on("click", ".product-container", function () {
@@ -68,7 +69,6 @@ $(document).on("click", ".close", function () {
 function loadDiscounts(response) {
     $(".products").empty();
     for (let deal in response.deals) {
-
         for (let item in response.deals[deal]) {
             let itemDeal = response.deals[deal][item];
 
@@ -137,9 +137,5 @@ function loadDiscounts(response) {
             $(".products").append(owlItem);
         }
     }
-
 }
 
-function loadCoupons(response) {
-
-}

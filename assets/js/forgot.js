@@ -17,27 +17,28 @@ $("#submitemail").on("click", function () {
         for (let i in val) {
             user = val[i]
             id = i
+            console.log(mail)
+            console.log(val[i])
             if (user.email === mail) {
                 $("#newpassword").css("display", "block")
                 $("#confirm-newpassword").css("display", "block")
                 $("#submitpassword").css("display", "block")
                 $("#email").css("display", "none")
                 $("#submitemail").css("display", "none")
-            }
-            else {
+                break;
+            } else {
                 alert("Please write your e-mail")
             }
-    console.log(user)
-
-            
         }
     })
 })
+
+
 function encrypt(password) {
     let key = "m"
     let encryptedPassword = ""
-    for(let i in password){
-        encryptedPassword+=password[i]^(key.charCodeAt()+i)%255
+    for (let i in password) {
+        encryptedPassword += password[i] ^ (key.charCodeAt() + i) % 255
     }
     return encryptedPassword
 }
@@ -48,11 +49,11 @@ $("#submitpassword").on("click", function () {
 
     if (newpassword === confirmnewpassword) {
         console.log('salam')
-        let password=encrypt(newpassword);
-        database.ref("users/"+id).set({
+        let password = encrypt(newpassword);
+        database.ref("users/" + id).set({
             email: user.email,
             password
         })
-        window.location='login.html';
+        window.location = 'login.html';
     }
 })
